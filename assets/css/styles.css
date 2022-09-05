@@ -24,16 +24,22 @@ html {
 
 #header {
     height: 46.5px;
-    background-color: #333;
-    color: #fff;
+    background-color: #000;
+    
     
    
 }
 #nav {
 
 }
-#nav li {
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li {
     display: inline-block;
+}
+#nav li {
+    
     position: relative;
 }
 #nav li a {
@@ -41,23 +47,44 @@ html {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
+    display: block;
 }
 #nav li:hover a {
     color: #000;
+    background-color: #fff;
+    
+    
+}
+ #nav .subnav li:hover a{
     background-color: #ccc;
-    display: inline-block;
+    color: #000;
+ }
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
     
 }
 #nav .subnav {
-    /* display: none; */
+    display: none;
     position: absolute;
-    background-color: #fff;
+    top:100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    min-width: 160px;
+}
+#nav > li > a{
+    text-transform: uppercase;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav a{
     color: #000;
-
+    padding: 0 12px;
+    
 }
 #slider {
-    min-height: 500px;
-    background-color: #333;
+   
 }
 
 #content {
